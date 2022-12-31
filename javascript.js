@@ -5,7 +5,7 @@ function getComputerChoice() {
     const index = Math.floor(Math.random() * 3);
     return choices[index];
   }
-  
+    
   function playRound(playerChoice) {
     const computerChoice = getComputerChoice();
      if (
