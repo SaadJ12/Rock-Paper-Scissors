@@ -6,15 +6,32 @@ function getComputerChoice() {
   
   function playGame(playerChoice) {
     const computerChoice = getComputerChoice();
-    if (playerChoice === computerChoice) {
-      console.log("It's a tie!");
-    } else if (
-      (playerChoice === 'Rock', 'ROCK', 'rOck', 'rock' && computerChoice === 'Scissors') ||
-      (playerChoice === 'Scissors', 'SCISSORS', 'scissors', 'sCISSORS' && computerChoice === 'Paper') ||
-      (playerChoice === 'Paper', 'paper', 'PAPER', 'pAper' && computerChoice === 'Rock')
+     if (
+      (playerChoice === 'Rock' && computerChoice === 'Scissors') ||
+      (playerChoice === 'ROCK' && computerChoice === 'Scissors') ||
+      (playerChoice === 'rock' && computerChoice === 'Scissors') ||
+      (playerChoice === 'SCISSORS' && computerChoice === 'Paper') ||
+      (playerChoice === 'scissors' && computerChoice === 'Paper') ||
+      (playerChoice === 'Scissors' && computerChoice === 'Paper') ||
+      (playerChoice === 'Paper' && computerChoice === 'Rock') ||
+      (playerChoice === 'paper' && computerChoice === 'Rock') ||
+      (playerChoice === 'PAPER' && computerChoice === 'Rock')
     ) {
       console.log('You win!');
-    } else {
-      console.log('You lose!');
+    } else if (
+      (playerChoice === 'PAPER' && computerChoice === 'Paper') ||
+      (playerChoice === 'paper' && computerChoice === 'Paper') ||
+      (playerChoice === 'Paper' && computerChoice === 'Paper') ||
+      (playerChoice === 'ROCK' && computerChoice === 'Rock') ||
+      (playerChoice === 'rock' && computerChoice === 'Rock') ||
+      (playerChoice === 'Rock' && computerChoice === 'Rock') ||
+      (playerChoice === 'SCISSORS' && computerChoice === 'Scissors') ||
+      (playerChoice === 'scissors' && computerChoice === 'Scissors') ||
+      (playerChoice === 'Scissors' && computerChoice === 'Scissors')
+    ) {
+        console.log("It's a tie!");
+    }    
+    else {
+      console.log('You Lost');
     }
   }
