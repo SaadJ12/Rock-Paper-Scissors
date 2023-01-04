@@ -71,6 +71,9 @@ function getComputerChoice() {
       document.querySelector(".ties").innerText = "Ties: " + 0;
       document.querySelector(".computerScore").innerText = "Computer Score: " + 0;
       document.querySelector(".round").innerText = "Round: " + "Game Finished";
+      setTimeout(function() {         //This function will remove the game results after 3 seconds.
+        document.querySelector('.gameResults').innerHTML = '';
+      }, 3000);
     }
       //If the score of either computer or player reaches 5 it will announce the winner.
       if(scores.computer >= 5) {
