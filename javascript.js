@@ -60,7 +60,7 @@ function getComputerChoice() {
       document.querySelector(".computerScore").innerText = "Computer Score: " + scores.computer;
     }
     document.querySelector(".round").innerText = "Round: " + round;
-    if(round > 5) {
+    function reset() {
       //reset round to 0
       scores.computer = 0;
       scores.player = 0;
@@ -69,9 +69,22 @@ function getComputerChoice() {
       document.querySelector(".playerScore").innerText = "PlayerScore: " + 0;
       document.querySelector(".ties").innerText = "Ties: " + 0;
       document.querySelector(".computerScore").innerText = "Computer Score: " + 0;
-      document.querySelector(".round").innerText = "Round: " + "Game Finished"
+      document.querySelector(".round").innerText = "Round: " + "Game Finished";
+      if(scores.computer >= 5) {
+      document.querySelector(".gameResults").innerText = "" + "Computer Won"; 
+      }
+      else if(scores.computer <= 5) {
+      document.querySelector(".gameResults").innerText = "" + "Player Won";
+      }
     }
-  }
+      if(scores.computer >= 5) {
+        reset();
+      }
+      else if(scores.player >= 5) {
+        reset();
+      }
+    }
+
 
 // Following is the 5 round game code to run this type playGame(); in console
 
