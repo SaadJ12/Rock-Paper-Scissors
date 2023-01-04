@@ -9,19 +9,23 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+    <div class="container">
     <div class="Header">Rock Paper Scissors</div>
+    <div class="about">"Welcome to our Rock Paper Scissors game! In this classic game, you can test your skills against the computer. Choose between rock, paper, or scissors and see who comes out on top. The first player to reach 5 points wins the game. Good luck and have fun!"</div>
     <div class="buttons">
     <button class="Rock" onclick = "playRound('Rock')">Rock</button>
     <button class="Paper" onclick = "playRound('Paper')">Paper</button>
     <button class ="Scissors" onclick = "playRound('Scissors')">Scissors</button>
     </div>
-    <div class="final">          </div>
+    </div>
+    <div class="scoreboard">
+    <div class="final">         </div>
     <div class="round">Round: </div>
     <div class="computerScore">Computer Score: 0          </div>
     <div class="playerScore">Player Score: 0         </div>
     <div class="ties">Ties: 0</div>
-    <div class="gameResults">  </div>
-    <div class="about">"Welcome to our Rock Paper Scissors game! In this classic game, you can test your skills against the computer. Choose between rock, paper, or scissors and see who comes out on top. The first player to reach 5 points wins the game. Good luck and have fun!"</div>
+    <div class="gameResults"></div>
+    </div>
     <script src="javascript.js" async defer></script>
     </body>
 </html>

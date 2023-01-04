@@ -49,15 +49,15 @@ function getComputerChoice() {
       round++;
     }
     if(result === "You Win") {
-      document.querySelector(".final").innerText = result;
+      document.querySelector(".final").innerText = "Current Round Result: " + result;
       document.querySelector(".playerScore").innerText = "PlayerScore: " + scores.player;
     }
     else if(result === "Its a Tie") {
-      document.querySelector(".final").innerText = result;
+      document.querySelector(".final").innerText = "Current Round Result: " + result;
       document.querySelector(".ties").innerText = "Ties: " + scores.ties;
     }
     else {
-      document.querySelector(".final").innerText = result;
+      document.querySelector(".final").innerText = "Current Round Result: " + result;
       document.querySelector(".computerScore").innerText = "Computer Score: " + scores.computer;
     }
     document.querySelector(".round").innerText = "Round: " + round;
@@ -71,15 +71,16 @@ function getComputerChoice() {
       document.querySelector(".ties").innerText = "Ties: " + 0;
       document.querySelector(".computerScore").innerText = "Computer Score: " + 0;
       document.querySelector(".round").innerText = "Round: " + "Game Finished";
-      if(scores.computer >= 5) {
-      document.querySelector(".gameResults").innerText = "" + "Computer Won"; 
-      }
-      else if(scores.computer <= 5) {
-      document.querySelector(".gameResults").innerText = "" + "Player Won";
-      }
     }
+      //If the score of either computer or player reaches 5 it will announce the winner.
+      if(scores.computer >= 5) {
+        document.querySelector(".gameResults").innerText = "" + "Computer Won"; 
+        }
+      else if(scores.player >= 5) {
+        document.querySelector(".gameResults").innerText = "" + "Player Won";
+        }
       //If the score of either computer or player reaches 5 it will execute reset function
-    if (scores.computer >= 5 || scores.player >= 5) {
+    if (scores.computer >=5 || scores.player >= 5) {
       reset();
     }
   } 
